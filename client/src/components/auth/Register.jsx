@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -21,24 +20,6 @@ function Register() {
       console.log('Passwords do not match');
     } else {
       console.log('Success');
-      // const newUser = {
-      //   name,
-      //   email,
-      //   password
-      // }
-      // try {
-      //   const config = {
-      //     headers: {
-      //       'Content-Type': 'application/json'
-      //     }
-      //   }
-      //   const body = JSON.stringify(newUser);
-      //   const res = await axios.post('/api/users', body, config);
-      //   console.log(res.data)
-      // } catch (err) {
-      //   console.log(err.response.data)
-
-      // }
     }
   };
 
@@ -95,7 +76,7 @@ function Register() {
             required
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input type="submit" className="btn btn-primary shadow" value="Register" />
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login">Sign In</Link>
