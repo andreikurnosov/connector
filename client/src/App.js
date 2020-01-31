@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react';
 import './App.css';
+import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing';
+
 
 function App() {
   return (
     <Fragment>
-      <i class="fa fa-ambulance" aria-hidden="true"></i>
-      <h1>APP</h1>
+      <Navbar />
+      <Landing />
     </Fragment>
   );
 }
