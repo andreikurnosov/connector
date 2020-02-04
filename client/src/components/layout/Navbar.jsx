@@ -24,7 +24,9 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   );
   const guestLinks = (
     <ul>
-      <Link to="/profiles">Developers</Link>
+      <li>
+        <Link to="/profiles">Developers</Link>
+      </li>
       <li>
         <Link to="/register">Register</Link>
       </li>
