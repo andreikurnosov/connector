@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addComment, removeComment } from '../../actions/post';
+import { addComment } from '../../actions/post';
 
-const CommentForm = ({ addComment, removeComment, postId }) => {
+const CommentForm = ({ addComment, postId }) => {
   const [text, setText] = useState('');
   return (
     <div className="post-form">
@@ -15,7 +15,7 @@ const CommentForm = ({ addComment, removeComment, postId }) => {
         onSubmit={e => {
           e.preventDefault();
           addComment(postId, { text });
-          setText('');
+          setText(' ');
         }}
       >
         <textarea
@@ -34,8 +34,7 @@ const CommentForm = ({ addComment, removeComment, postId }) => {
 
 CommentForm.propTypes = {
   addComment: PropTypes.func.isRequired,
-  removeComment: PropTypes.func.isRequired,
-  postId: PropTypes.string.isRequired
+  postId: PropTypes.number.isRequired
 };
 
-export default connect(null, { addComment, removeComment })(CommentForm);
+export default connect(null, { addComment })(CommentForm);
