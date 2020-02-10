@@ -141,7 +141,7 @@ router.put('/unlike/:id', auth, async (req, res) => {
     ) {
       return res.status(400).json({ msg: 'Post has not yet been liked' });
     }
-
+    
     // Get remove index
     const removeIndex = post.likes
       .map(like => like.user.toString())
