@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://nixdie:URnzC44x123123@connector-zs5ep.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtToken": "mylittlepony",
+  "githubClientId": "772cc666fd52042ce908",
+  "githubSecret": "c796408753f7408b2ab6150a06852c82a0d9a668"
+}
